@@ -8,7 +8,7 @@ import {
   REMOVE_ITEM,
 } from "../Type";
 
-export default (state, action) => {
+const ContactReducer =  (state, action) => {
   switch (action.type) {
     case LOADING_CONTACT:
       return {
@@ -55,3 +55,6 @@ export default (state, action) => {
       return state;
   }
 };
+
+
+export default ContactReducer;

@@ -2,13 +2,13 @@ import Title from "../Components/Title";
 import PortfolioCategory from "../Components/portfolioCategory";
 import PortfolioContent from "../Components/portfolioContent";
 import PortfolioContext from "../Context/Portfolio/PortfolioContext";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import authContext from "../Context/auth/authContext";
 const Portfolio = () => {
   const portfolioContext = useContext(PortfolioContext);
   const getAuthContext = useContext(authContext);
-  const { portfolios, filtered, filterContent, getPortfolio } = portfolioContext;
-  const [categories, setCategories] = useState(null);
+  const { portfolios, filterContent, getPortfolio } = portfolioContext;
+  
 
   
   useEffect(() => {
@@ -28,12 +28,12 @@ const Portfolio = () => {
           {filterContent !== null && filterContent.length
             ? filterContent.map((portfolio) => {
                 return (
-                  <PortfolioContent key={portfolio.id} portfolio={portfolio} />
+                  <PortfolioContent key={portfolio._id} portfolio={portfolio} />
                 );
               })
             : portfolios.map((portfolio) => {
                 return (
-                  <PortfolioContent key={portfolio.id} portfolio={portfolio} />
+                  <PortfolioContent key={portfolio._id} portfolio={portfolio} />
                 );
               })}
         </div>

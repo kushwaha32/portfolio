@@ -1,6 +1,6 @@
 
 
-export default (state, action) => {
+const blogReducer =  (state, action) => {
       switch (action.type) {
          
       
@@ -8,3 +8,5 @@ export default (state, action) => {
               break;
       }
 };
+
+export default blogReducer;

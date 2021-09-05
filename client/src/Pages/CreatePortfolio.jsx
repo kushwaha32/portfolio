@@ -41,7 +41,7 @@ const CreatePortfolio = () => {
       useAlertContext.setAlert(usePortfolioContext.success.msg, "success");
     };
 
-    //eslint-disable-nex-line
+    //eslint-disable-next-line
   }, [usePortfolioContext.error,usePortfolioContext.success]);
 
   // form submit

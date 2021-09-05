@@ -15,13 +15,13 @@ const BlogState = props => {
 
              },
              {
-                id: 1,
+                id: 2,
                 title: "Lorem ipsum, dolor sit amet consectetur adipisicingLorem ipsum, dolor sit amet consectetur adipisicing",
                 text: "Lorem ipsum, dolor sit amet consectetur adipisicing"
 
             },
             {
-                id: 1,
+                id: 3,
                 title: "Lorem ipsum, dolor sit amet consectetur adipisicingLorem ipsum, dolor sit amet consectetur adipisicing",
                 text: "Lorem ipsum, dolor sit amet consectetur adipisicing"
 
@@ -30,7 +30,7 @@ const BlogState = props => {
          ]
     };
 
-    const [state, dispatch] = useReducer(blogReducer, initialState);
+    const [state] = useReducer(blogReducer, initialState);
 
 
    return(

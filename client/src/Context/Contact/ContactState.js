@@ -11,7 +11,6 @@ import {
 } from "../Type";
 import ContactContext from "./ContactContext";
 import ContactReducer from "./ContactReducer";
-import setAuthToken from "../../utils/setAuthToken";
 
 const ContactState = (props) => {
   const initialState = {
@@ -88,7 +87,7 @@ const ContactState = (props) => {
       },
     };
     try {
-      const res = await axios.delete(`/api/contact/${id}`, config);
+      await axios.delete(`/api/contact/${id}`, config);
       dispatch({
         type: REMOVE_ITEM,
         payload: id,

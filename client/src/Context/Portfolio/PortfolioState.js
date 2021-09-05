@@ -1,7 +1,6 @@
 import { useReducer } from "react";
 import PortfolioContent from "../Portfolio/PortfolioContext";
 import PortfolioReducer from "./PortfolioReducer";
-import layout from "../../img/service/layout.png";
 import {
   FILTER_DATA,
   GET_PORTFOLIO,

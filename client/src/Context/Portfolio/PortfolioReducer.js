@@ -8,7 +8,7 @@ import {
   CLEAR_ERROR,
 } from "../Type";
 
-export default (state, action) => {
+const PortfolioReducer = (state, action) => {
   switch (action.type) {
     case FILTER_DATA:
       return {
@@ -52,3 +52,6 @@ export default (state, action) => {
       break;
   }
 };
+
+
+export default PortfolioReducer;
